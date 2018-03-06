@@ -17,7 +17,7 @@ import java.net.Socket;
  */
 public class Servidor {
     
-    private int puerto=10101;
+    private int puerto=3000;
     private ServerSocket soc;
      
     
