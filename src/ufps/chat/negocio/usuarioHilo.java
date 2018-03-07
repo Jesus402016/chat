@@ -51,7 +51,10 @@ public class usuarioHilo extends Thread{
                         
                     }else if(list[0].equals("MENSAJE")){
                        enviarMensaje(list);
-                    }else if(list[0].equals("CONECTADOS")){
+                    }else if(list[0].equals("MENSAJETODOS")){
+                        enviarMensajeTodos(list);
+                    }
+                    else if(list[0].equals("CONECTADOS")){
                         conectados();
                     }
                 }
@@ -153,13 +156,22 @@ public class usuarioHilo extends Thread{
           user.usuario.getEnviar().writeObject(usuarios);
         
   }
-  //Metodo encargado de enviar Mensaje
+  //Metodo encargado de enviar Mensaje a un solo usuario
   public void enviarMensaje(String[] list) throws IOException{
       ArrayList<usuarioHilo> usuarios=this.servidor.getUsuarios();
       for (usuarioHilo user : usuarios) {
          if(list[2].equals(user.usuario.getNombre())){
               user.usuario.getEnviar().writeObject(list);
           }
+      }
+  }
+      
+    //Metodo encargado de enviar Mensaje a todos
+  public void enviarMensajeTodos(String[] list) throws IOException{
+      ArrayList<usuarioHilo> usuarios=this.servidor.getUsuarios();
+      for (usuarioHilo user : usuarios) {
+              user.usuario.getEnviar().writeObject(list);
+          
       }
   }
   

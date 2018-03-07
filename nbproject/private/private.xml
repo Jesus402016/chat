@@ -13,9 +13,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Jesus/Documents/NetBeansProjects/chat/src/ufps/chat/negocio/main.java</file>
-            <file>file:/C:/Users/Jesus/Documents/NetBeansProjects/chat/src/ufps/chat/DTO/usuario.java</file>
+            <file>file:/C:/Users/Jesus/Documents/NetBeansProjects/chat/src/ufps/chat/Servidor/Servidor.java</file>
             <file>file:/C:/Users/Jesus/Documents/NetBeansProjects/chat/src/ufps/chat/negocio/usuarioHilo.java</file>
             <file>file:/C:/Users/Jesus/Documents/NetBeansProjects/chat/src/ufps/chat/negocio/servidorHilo.java</file>
+            <file>file:/C:/Users/Jesus/Documents/NetBeansProjects/chat/src/prueba.java</file>
         </group>
     </open-files>
 </project-private>
