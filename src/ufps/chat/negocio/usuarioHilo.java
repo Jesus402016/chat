@@ -98,7 +98,7 @@ public class usuarioHilo extends Thread{
           for (usuarioHilo usuario :this.servidor.getUsuarios()) {
                  usuario.usuario.getEnviar().writeObject(list);
           }
-      
+      this.usuarios();
       
   }
   //Metodo que se encarga de ingresar el nombre de usuario que se conecto y avisar a los demas
@@ -170,8 +170,9 @@ public class usuarioHilo extends Thread{
   public void enviarMensajeTodos(String[] list) throws IOException{
       ArrayList<usuarioHilo> usuarios=this.servidor.getUsuarios();
       for (usuarioHilo user : usuarios) {
+          if(!list[1].equals(user.usuario.getNombre())){
               user.usuario.getEnviar().writeObject(list);
-          
+          }
       }
   }
   
